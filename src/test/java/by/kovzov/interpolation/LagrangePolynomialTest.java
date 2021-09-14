@@ -32,7 +32,7 @@ public class LagrangePolynomialTest {
     public void getOrdinateTest1() {
         Function<Double, Double> func = x -> x * x + 4 * Math.sin(x);
         double x = 0.71;
-        double abscissas[] = new double[]{0, 0.628, 1.257, 1.885};
+        double abscissas[] = new double[]{0, 0.628, 1.257, 1.885, 2.513};
         double ordinates[] = new double[abscissas.length];
 
         for (int i = 0; i < abscissas.length; i++) {
@@ -50,7 +50,7 @@ public class LagrangePolynomialTest {
     public void getOrdinateTest2() {
         Function<Double, Double> func = x -> x * x + 4 * Math.sin(x);
         double x = 1.54;
-        double abscissas[] = new double[]{0.628, 1.257, 1.885, 2.513};
+        double abscissas[] = new double[]{0.628, 1.257, 1.885, 2.513, 3.142};
         double ordinates[] = new double[abscissas.length];
 
         for (int i = 0; i < abscissas.length; i++) {
@@ -67,7 +67,7 @@ public class LagrangePolynomialTest {
     public void getOrdinateTest3() {
         Function<Double, Double> func = x -> x * x + 4 * Math.sin(x);
         double x = 3.01;
-        double abscissas[] = new double[]{1.257, 1.885, 2.513, 3.142};
+        double abscissas[] = new double[]{0.628, 1.257, 1.885, 2.513, 3.142};
         double ordinates[] = new double[abscissas.length];
 
         for (int i = 0; i < abscissas.length; i++) {
