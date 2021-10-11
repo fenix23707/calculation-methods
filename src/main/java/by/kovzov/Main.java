@@ -1,6 +1,5 @@
 package by.kovzov;
 
-import by.kovzov.interpolation.LagrangePolynomial;
 import by.kovzov.interpolation.Spline;
 
 import java.util.function.Function;

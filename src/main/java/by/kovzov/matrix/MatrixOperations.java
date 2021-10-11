@@ -23,7 +23,7 @@ public class MatrixOperations {
     }
 
     //приведение матрицы к еденичной:
-    public static void makeUnitMatrix(double[][]matrix) throws Exception{
+    public static void makeUnitMatrix(double[][]matrix){
         for(int i=0;i<matrix.length;i++)
         {
             if(matrix[i][i]==0)//если нужный элемент равен 0,
@@ -138,7 +138,7 @@ public class MatrixOperations {
     }
 
     //метод, который меняет местами срочки матрицы, чтобы нужный элемент стал не 0
-    private static void makeElementNonZero(double[][]matrix,int index) throws Exception{
+    private static void makeElementNonZero(double[][]matrix,int index){
         System.out.println();
         for(int i=0;i<matrix.length;i++)
         {
@@ -150,7 +150,7 @@ public class MatrixOperations {
                 return;//и завершаем метод
             }
         }
-        throw new Exception("it is not possible to reduce the matrix to a triangular form");
+        throw new RuntimeException("it is not possible to reduce the matrix to a triangular form");
     }
 
     //метод, который делит всю строку на переданный элемент

@@ -9,7 +9,7 @@ public class MethodGaussJordan extends MethodGauss{
         super(dimensionOfMatrix, scanner);
     }
 
-    protected void findAnswer() throws Exception//нахождение ответа
+    protected void findAnswer()//нахождение ответа
     {
         MatrixOperations.makeUnitMatrix(extendedMatrix);//приведение матрицы к треугольному виду
         answer = new double[extendedMatrix.length];//массив в котором будет хранится результат

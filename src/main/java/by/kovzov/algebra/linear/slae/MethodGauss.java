@@ -14,7 +14,7 @@ public class MethodGauss {
         extendedMatrix= MatrixOperations.readMatrix(scanner,dimensionOfMatrix,dimensionOfMatrix+1);
     }
 
-    public MethodGauss(double[][] matrrixA, double[] vectorF)throws Exception{
+    public MethodGauss(double[][] matrrixA, double[] vectorF){
         extendedMatrix = new double[vectorF.length][matrrixA[0].length + 1];
         for(int i = 0; i < vectorF.length; i++)
         {
@@ -29,7 +29,7 @@ public class MethodGauss {
     //сетеры:
 
     //гетеры:
-    public double[]getAnswer() throws Exception
+    public double[]getAnswer()
     {
         this.findAnswer();
         return answer;
@@ -40,7 +40,7 @@ public class MethodGauss {
         return 0!= MatrixOperations.determinant(extendedMatrix);
     }
     //прямой ход метода Гаусса:
-    public void makingLookTriangular() throws Exception//метод, который приводит к треугольному виду
+    public void makingLookTriangular() //метод, который приводит к треугольному виду
     {
         for(int i=0;i<extendedMatrix.length;i++)
         {
@@ -50,7 +50,7 @@ public class MethodGauss {
         }
     }
 
-    protected void makeElementNonZero(int index) throws Exception//метод, который меняет местами срочки матрицы, чтобы нужный элемент стал не 0
+    protected void makeElementNonZero(int index) //метод, который меняет местами срочки матрицы, чтобы нужный элемент стал не 0
     {
         System.out.println();
         for(int i=0;i<extendedMatrix.length;i++)
@@ -63,7 +63,7 @@ public class MethodGauss {
                 return;//и завершаем метод
             }
         }
-        throw new Exception("it is not possible to reduce the matrix to a triangular form");
+        throw new RuntimeException("it is not possible to reduce the matrix to a triangular form");
     }
     protected void subRowFromMatrix(int indexMainDiag)//метод, который отнимает нужную строку от всех строк в матрицы
     {
@@ -75,7 +75,7 @@ public class MethodGauss {
         }
     }
     //обратный ход метода Гаусса:
-    protected void findAnswer() throws Exception//нахождение ответа
+    protected void findAnswer() //нахождение ответа
     {
         this.makingLookTriangular();//приведение матрицы к треугольному виду
         answer = new double[extendedMatrix.length];//массив в котором будет хранится результат

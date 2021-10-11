@@ -14,7 +14,7 @@ public class MethodGaussChooseElement extends MethodGauss{
         super(matrrixA, vectorF);
     }
 
-    public void makingLookTriangular() throws Exception//метод, который приводит к треугольному виду
+    public void makingLookTriangular()//метод, который приводит к треугольному виду
     {
         for(int i=0;i<extendedMatrix.length;i++)
         {
