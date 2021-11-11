@@ -15,14 +15,14 @@ public class SimpsonMethodIntegralTest {
         double b = 1;
         Function<Double, Double> func = x -> 1 / (1 + x * x);
         Function< Double, Double> antiderivative = x -> Math.atan(x);
-        double m = 4;
+        double m = 10;
         double accuracy = 0.0005;
         AbstractIntegral integral = new SimpsonMethodIntegral();
 
         double actual = integral.calculate(a, b, func, accuracy, m);
         double expected = antiderivative.apply(b) - antiderivative.apply(a);
 
-        assertEquals(expected, actual, 0.01);
+        assertEquals(expected, actual, accuracy);
     }
 
     @Test
