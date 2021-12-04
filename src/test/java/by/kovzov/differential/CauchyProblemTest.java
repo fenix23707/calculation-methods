@@ -1,5 +1,8 @@
 package by.kovzov.differential;
 
+import by.kovzov.differential.cauchy.AdvancedEulerMethod;
+import by.kovzov.differential.cauchy.CauchyProblemAbstract;
+import by.kovzov.differential.cauchy.RungeKuttaMethod;
 import by.kovzov.matrix.VectorOperations;
 import org.junit.Test;
 import org.junit.runner.RunWith;

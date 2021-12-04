@@ -28,7 +28,7 @@ public class RungeKuttaMethod extends DifferentialSystemAbstract {
             double k4 = getKorL4(answer[i - 1], h, k3, l3, funcs.get(0));
             double l4 = getKorL4(answer[i - 1], h, k3, l3, funcs.get(1));
 
-
+            answer[i][0] = answer[i - 1][0] + h;
             answer[i][1] = answer[i - 1][1] + h / 6 * (k1 + 2 * k2 + 2 * k3 + k4);
             answer[i][2] = answer[i - 1][2] + h / 6 * (l1 + 2 * l2 + 2 * l3 + l4);
         }

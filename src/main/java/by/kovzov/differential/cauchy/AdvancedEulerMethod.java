@@ -1,4 +1,4 @@
-package by.kovzov.differential;
+package by.kovzov.differential.cauchy;
 
 import java.util.function.BiFunction;
 
